@@ -1,6 +1,28 @@
 .checkout-help-page {
   margin: auto;
   max-width: 1200px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.checkout-help-page + div {
+  margin: auto;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  box-shadow: 1px 3px 10px 0px rgba(104, 117, 143, 0.4);
+  background: #e7eaf1;
+}
+
+.checkout-help-page + div h3 {
+  width: 100%; 
+  height: 70px;
+  text-align: center;
+  background: rgba(104, 117, 143, 1);
+  vertical-align: middle;
+  line-height:70px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 0;
 }
 
 .checkout-help-page .pane {
@@ -20,6 +42,35 @@
   line-height:70px;
 }
 
+.checkout-help-page + div ul {
+  margin: 5px;
+}
+
+.checkout-help-page + div ul li a {
+  color: rgba(66, 76, 99, 0.83);
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-transition: color 500ms ease-in-out;
+  -ms-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
+}
+
+.checkout-help-page + div ul li a:hover {
+  color: rgba(8,24,53,1);
+  font-weight: 700;
+}
+
+.checkout-help-page + div ul li {
+  margin: 5px;
+  background: #fff;
+  list-style: none;
+  list-style-position: none;
+}
+
 .checkout-help-page .pane .column {
   width: 23%;
   height: 220px;
@@ -29,12 +80,14 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: solid #e7eaf1 .5px;
-  float: left;
   border-radius: 3px;
   position: relative;
   min-width: 200px;
 }
 
+
+.checkout-help-page ul,
+.checkout-help-page + div ul,
 .checkout-help-page .pane .column p {
   padding: 15px;
 }

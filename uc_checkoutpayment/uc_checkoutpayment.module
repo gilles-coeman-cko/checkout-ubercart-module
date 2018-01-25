@@ -577,7 +577,7 @@ function uc_payment_method_checkoutpayment($op, &$order) {
  *
  * Implements hook_form_validate() for the admin edit order form.
  */
-function process_moto_validate(&$elements, &$form_state, $form_id = NULL) {
+function (&$elements, &$form_state, $form_id = NULL) {
   if ($form_state['values']['payment_method'] == "cko" && $form_state['triggering_element']["#value"] == "Submit changes") {
 
     if (!valid_email_address($form_state['values']['primary_email'])) {
