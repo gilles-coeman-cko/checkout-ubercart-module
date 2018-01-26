@@ -83,6 +83,7 @@
   border-radius: 3px;
   position: relative;
   min-width: 200px;
+  float: left;
 }
 
 

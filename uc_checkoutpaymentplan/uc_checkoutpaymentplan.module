@@ -24,14 +24,6 @@ module_load_include('php', 'uc_checkoutpaymentplan', 'includes/methods/objects')
 function uc_checkoutpaymentplan_menu() {
   $items = array();
 
-  $items['uc_checkoutpaymentplan/develop'] = array(
-    'title' => 'Developping page',
-    'page callback' => 'page_development',
-    /* Access neccecary for webhooks */
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
-
   $items['user/%user/subscriptions'] = array(
     'title' => t('Subscriptions'),
     'page callback' => 'ckopp_page_user_subscriptions',
@@ -1124,39 +1116,6 @@ function ckopp_html($element, array $config = array()) {
   }
 
   return render($build);
-}
-
-/**
- * Developer function to print variables in a clean way.
- *
- * @param mixed $var
- *   Any variable of anytype.
- */
-function pre_var_dump($var , $buffer = false) {
-  if ($buffer) {
-    ob_start();
-    var_dump($var);
-    $string = ob_get_clean();
-    error_log($string, 0);
-    return $string;
-  }
-
-  echo '<pre>';
-  var_dump($var);
-  echo '</pre>';
-}
-
-/**
- * Developer function which gives access to a developper page.
- *
- * @return mixed
- *   The output used for rendering the page.
- */
-function page_development() {
-  //variable_del('uc_currency_code');
-  pre_var_dump(variable_get('uc_currency_code'));
-
-  return 'NULL';
 }
 
 /**
